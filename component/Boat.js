@@ -6,13 +6,14 @@ const styles = StyleSheet.create({
     parent:{
         flex: 1,
         marginTop:50,
-        backgroundColor:'lightgrey',
+        backgroundColor:'teal',
         flexDirection:'column',
         justifyContent:'center',
         alignItems: 'center',
         borderWidth:3,
         borderColor:'black',
-        borderRadius:10
+        borderRadius:10,
+        padding:10
     },
     desc:{
         fontSize:16,
@@ -22,9 +23,10 @@ const styles = StyleSheet.create({
         textAlign:'center',
         textAlignVertical:'center',
         borderRadius:5,
-        height:60,
+        height:'auto',
         width:400,
-        backgroundColor:'pink'
+        backgroundColor:'lightgrey',
+        padding:5,
     },
     name:{
         borderWidth:1,
@@ -32,10 +34,10 @@ const styles = StyleSheet.create({
         backgroundColor:'skyblue',
         borderRadius:5,
         textAlignVertical:'center',
-        height:50,
+        height:'auto',
         width:300,
-        justifyContent:'center'
-
+        justifyContent:'center',
+        padding:5,
     },
 });
 
