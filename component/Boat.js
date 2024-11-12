@@ -2,15 +2,51 @@ import React from 'react';
 import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome6";
 
+const styles = StyleSheet.create({
+    parent:{
+        flex: 1,
+        marginTop:50,
+        backgroundColor:'lightgrey',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems: 'center',
+        borderWidth:3,
+        borderColor:'black',
+        borderRadius:10
+    },
+    desc:{
+        fontSize:16,
+        fontWeight:'bold',
+        fontStyle:'italic',
+        borderWidth:1,
+        textAlign:'center',
+        textAlignVertical:'center',
+        borderRadius:5,
+        height:60,
+        width:400,
+        backgroundColor:'pink'
+    },
+    name:{
+        borderWidth:1,
+        borderColor:'black',
+        backgroundColor:'skyblue',
+        borderRadius:5,
+        textAlignVertical:'center',
+        height:50,
+        width:300,
+        justifyContent:'center'
+
+    },
+});
+
 const Boat = ({ icon_name, name, description, poster})=> {
     return (
-        <View>
-            <View style={{flexDirection: "row", alignItems: "center"}}>
-                <Icon name={icon_name} size={30} color="#800020"/>
-                <Text style={{fontSize: 18, fontWeight: "bold"}}>{name}</Text>
-
+        <View style={[styles.parent, {marginTop: 50}]}>
+            <View style={[styles.name,{flexDirection: "row", alignItems: "center"}]}>
+                <Icon name={icon_name} size={30} color="darkblue"/>
+                <Text style={{fontSize: 18, fontWeight: "bold"}}>   {name}</Text>
             </View>
-            <Text>
+            <Text style={styles.desc}>
                 {description}
             </Text>
             <Image source={poster} style={{width:400, height:500}}/>
@@ -22,7 +58,7 @@ const AllBoats = () => {
     return (
         <ScrollView>
             <Text>
-                <Text style={{fontSize: 30, fontWeight: "bold"}}> GetABoat - For Sale</Text>
+                <Text style={{fontSize: 30, fontWeight: "bold", marginTop:50, }}>         GetABoat - For Sale</Text>
             </Text>
 
             <Boat icon_name="sailboat"
